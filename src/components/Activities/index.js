@@ -50,7 +50,7 @@ export default function Activities() {
 
                 <CardFooter>
                     <Details>
-                        <Value>R$ 50,00</Value>
+                        <Value>R$ 51,00</Value>
                         <Divider />
 
                     <Feather name="lock" color="#FFF" size={14}/>
