@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Container, Option, Img, Label } from './styles';
 
