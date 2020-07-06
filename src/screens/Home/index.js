@@ -8,6 +8,7 @@ import { Wrapper, Container, Header, BalanceContatiner, BalanceTitle, Balance } 
 import Suggestions from '../../components/Suggestions';
 import Activities from '../../components/Activities';
 import Tips from '../../components/Tips';
+import Banner from '../../components/Banner';
 
 
 export default function Home() {
@@ -30,6 +31,8 @@ export default function Home() {
         <Activities />
 
         <Tips />
+
+        <Banner />
 
 
       </Container>
