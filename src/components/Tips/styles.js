@@ -24,6 +24,7 @@ export const Option = styled.TouchableOpacity`
     border-radius:8px;
     padding:15px;
     justify-content:space-between;
+    margin-right:16px;
 
 
 `;

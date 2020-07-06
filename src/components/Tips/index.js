@@ -11,11 +11,34 @@ import img12 from '../../images/12.png';
 const items = [
 
     {
-
-        key:String(Math.random()),
+        key: String(Math.random()),
         img: img8,
-        title:''
-
+        title: 'Pague suas contas sem sair de casa',
+        bgColor: '#172c4a',
+    },
+    {
+        key: String(Math.random()),
+        img: img9,
+        title: 'Pague suas contas sem sair de casa',
+        bgColor: '#6a0159',
+    },
+    {
+        key: String(Math.random()),
+        img: img10,
+        title: 'Pague suas contas sem sair de casa',
+        bgColor: '#4139c8',
+    },
+    {
+        key: String(Math.random()),
+        img: img11,
+        title: 'Pague suas contas sem sair de casa',
+        bgColor: '#00ab4b',
+    },
+    {
+        key: String(Math.random()),
+        img: img12,
+        title: 'Pague suas contas sem sair de casa',
+        bgColor: '#ba2f76',
     },
 
 ];
@@ -26,17 +49,17 @@ export default function Tips() {
     return (
 
         <Container>
-            <Option bgcolor="#172c4a">
+            {items.map((item) => (
 
-                <Title>Pague suas contas sem sair de casa</Title>
+                <Option key ={item.key}  bgcolor={item.bgColor}>
 
-                <Img source={img8} />
+                    <Title> {item.title}   </Title>
 
-            </Option>
+                    <Img source={item.img} />
 
-            
+                </Option>
 
-
+            ))}
 
 
         </Container>
