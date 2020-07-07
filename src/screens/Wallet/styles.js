@@ -49,3 +49,39 @@ margin-left: -2px;
 
 
 `;
+
+export const Info = styled.Text`
+color:#fff;
+font-size:12px;
+font-weight:bold;
+
+`;
+
+export const Actions = styled.View`
+flex-direction:row;
+margin-top:40px;
+
+`;
+
+export const Action = styled.TouchableOpacity`
+flex-direction:row;
+align-items:center;
+border: 1px solid rgba(255, 255,255,0.6);
+width:150px;
+height:50px;
+border-radius:15px;
+justify-content:center;
+margin: 0 8px;
+
+`;
+
+export const ActionLabel = styled.Text`
+color:#fff;
+font-size:16px;
+marginLeft: 10px;
+
+`;
+
+
+
+
