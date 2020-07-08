@@ -163,3 +163,22 @@ font-weight:bold;
 margin-left:15px;
 `;
 
+export const UseTicketButton = styled.TouchableOpacity`
+flex-direction:row;
+align-items:center;
+margin-top:15px;
+justify-content:center;
+`;
+
+export const UseTicketLabel = styled.Text`
+color:#0DB060;
+font-weight:bold;
+marginLeft: 5px;
+font-size:16px;
+text-Decoration-line:underline;
+
+`;
+
+
+
+

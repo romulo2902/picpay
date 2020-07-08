@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { Feather, MaterialCommunityIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
 
@@ -30,6 +30,8 @@ import {
   Img,
   AddButton,
   AddLabel,
+  UseTicketButton,
+  UseTicketLabel,
 
 } from './styles';
 
@@ -37,6 +39,19 @@ import creditCard from '../../images/credit-card.png';
 
 
 export default function Wallet() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [UseBalanceTeste, setUseBalance] = useState(false);
+
+  function handleToggleVisibility() {
+     setIsVisible( (prevState) =>  !prevState);
+   }
+
+   function handleToggleUsebalance() {
+    setUseBalance( (prevState) =>  !prevState);
+  }
+
+
   return (
       <Wrapper>
         <Header colors={['#52E78C' , '#1AB563']}>
@@ -45,11 +60,11 @@ export default function Wallet() {
       <Tittle>Saldo PicPay</Tittle>
 
       <BalanceContainer> 
-      <Value> R$ <Bold>0,00</Bold>  </Value>
+      <Value> R$ <Bold>0,00 </Bold>  </Value>
 
-      <EyeButton> 
+      <EyeButton > 
         
-      <Feather name="eye" size={28} color="#fff"   />  
+      <Feather name= "eye" size={28} color="#fff"   />  
         
       </EyeButton>
       </BalanceContainer>
@@ -77,8 +92,19 @@ export default function Wallet() {
 
         <UseBalance>
           <UseBalanceTitle>Usar saldo saldo ao pagar </UseBalanceTitle>
-          <Switch />
+
+
+          <Switch 
+          
+          value={UseBalanceTeste}
+          onValueChange={handleToggleUsebalance}
+          
+          />
+
+
         </UseBalance>
+
+
 
         <PaymentMethods>
 
@@ -108,6 +134,15 @@ export default function Wallet() {
           </AddButton>
 
         </Card>
+
+        {/* <UseTicketButton>
+
+            <MaterialCommunityIcons name="ticket-outline" size={20} color="#0DB060" />
+            <UseTicketLabel>Usar código promocional</UseTicketLabel>
+
+
+        </UseTicketButton> */}
+
 
         </PaymentMethods>
 
